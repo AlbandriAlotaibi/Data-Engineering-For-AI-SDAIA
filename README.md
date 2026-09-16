@@ -10,7 +10,7 @@ SDAIA Academy: https://github.com/SDAIAAcademy
 #SDAIAAcademy
 
 GitHub (https://github.com/SDAIAAcademy)
-SDAIA Academy.
+#SDAIA Academy.
 
 ### Final evidence
 
