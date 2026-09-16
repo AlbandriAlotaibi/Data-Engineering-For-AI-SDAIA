@@ -1,7 +1,7 @@
 # LAB04 — Delta Transactions and Maintenance
 
 ## Evidence
-Executed in `day01/test.ipynb`.
+Executed in `ALL_LABS_01_08.ipynb`.
 
 ## Observed result
 The correction changed the trusted table from the earlier state to the corrected 75-row state. Time-travel reads, controlled schema evolution, compaction, copy-only delete, restore, and vacuum dry-run checks succeeded.

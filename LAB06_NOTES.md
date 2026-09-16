@@ -1,7 +1,7 @@
 # LAB06 — Data Quality and Quarantine
 
 ## Evidence
-Executed in `day01/test.ipynb` with Great Expectations and application-level quarantine logic.
+Executed in `ALL_LABS_01_08.ipynb` with Great Expectations and application-level quarantine logic.
 
 ## Observed result
 The mixed candidate contained 82 rows. The quality gate failed as intended; 7 defective rows were quarantined with reasons and 75 rows passed fresh validation. The approved contents matched the expected trusted population and the source Silver table remained unchanged.
