@@ -1,7 +1,7 @@
 # LAB07 — Serving Recovery
 
 ## Evidence
-Executed in `ALL_LABS_01_08.ipynb`.
+Executed in `Data-Engineering-For-AI-SDAIA.ipynb`.
 
 ## Observed result
 The deliberate failure was observed. The previous serving release remained preserved, and the rebuild created a new release identity with content equality.

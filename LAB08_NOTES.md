@@ -1,7 +1,7 @@
 # LAB08 — BI and AI Serving
 
 ## Evidence
-Executed in `ALL_LABS_01_08.ipynb`.
+Executed in `Data-Engineering-For-AI-SDAIA.ipynb`.
 
 ## Observed result
 The serving checks passed for Gold, BI, and AI schemas and keys. The final fact grain contains 75 trips and the BI totals reconcile to 1880.60 SAR. Foreign keys and group grains reconcile.

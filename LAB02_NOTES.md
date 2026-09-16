@@ -1,7 +1,7 @@
 # LAB02 — Cost and Performance
 
 ## Evidence
-Executed in `ALL_LABS_01_08.ipynb`.
+Executed in `Data-Engineering-For-AI-SDAIA.ipynb`.
 
 ## Observed result
 The stated teaching-unit model produced 1,460 units for always-on operation and 185 for scheduled operation, a difference of 1,275 units. The recorded query benchmark had medians of approximately 0.132 seconds for the baseline and 1.089 seconds for Delta v0.

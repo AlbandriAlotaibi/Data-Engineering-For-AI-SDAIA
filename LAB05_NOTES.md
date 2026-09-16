@@ -1,7 +1,7 @@
 # LAB05 — Kafka and Spark Streaming
 
 ## Evidence
-Executed in `ALL_LABS_01_08.ipynb` with real Kafka producer/consumer and Spark Kafka source.
+Executed in `Data-Engineering-For-AI-SDAIA.ipynb` with real Kafka producer/consumer and Spark Kafka source.
 
 ## Observed result
 The phases recorded 216, 216, 218, and 219 transport receipts, with 216, 216, 216, and 217 distinct business events. The same persistent checkpoint was reused and execution IDs changed across restarts. Producer/consumer offsets reconciled.
