@@ -1,4 +1,4 @@
-# MASAR Mini-Lakehouse — Capstone Project
+# Data-Engineering-For-AI-SDAIA — Capstone Project
 
 This repository is my completed capstone for the SDAIA Academy **Modern Data Engineering for AI Systems** programme.
 
@@ -16,22 +16,144 @@ The project demonstrates an end-to-end Bronze → Silver → Gold data platform 
 
 ### Submission structure
 
-The primary executed evidence notebook is `ALL_LABS_01_08.ipynb`, containing Labs 01–08 according to the supervisor's delivery instruction.
+The primary executed evidence notebook is `Data-Engineering-For-AI-SDAIA.ipynb`, containing Labs 01–08 according to the supervisor's delivery instruction.
 
 Supporting evidence is preserved in `LAB01_NOTES.md` through `LAB08_NOTES.md`, `reports/`, and `mini_lakehouse/`.
 
-<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>SDAIA Academy · Capstone Project</p><h1>Modern Data Engineering<br>for AI Systems</h1><h2>MASAR · Mini-Lakehouse</h2><p><strong>Albandri Alotaibi</strong><br>SDA-DSC-214 · Five days · Eight cumulative labs</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>أكاديمية سدايا · مواد المتدرب</p><h1>هندسة البيانات الحديثة<br>لأنظمة الذكاء الاصطناعي</h1><h2>مسار · بيئة بيانات مصغرة</h2><p><strong>Albandri Alotaibi</strong><br>SDA-DSC-214 · خمسة أيام · ثمانية لابات تراكمية</p></td></tr></table>
+## Project Overview
 
-<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Project Overview</h2><p>Turn small synthetic trip, driver and location feeds into a reliable data pipeline: preserve the source, build Silver, manage changes, receive events, check quality and deliver reporting and AI-ready tables.</p><p><strong>The labs are your final project.</strong> Complete them in sequence; no separate final assignment is added.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>نظرة عامة على المشروع</h2><p>حوّل ملفات اصطناعية صغيرة للرحلات والسائقين والمواقع إلى خط بيانات موثوق: احفظ المصدر، وابنِ Silver، وأدر التغييرات، واستقبل الأحداث، وافحص الجودة، ثم جهّز جداول التقارير والذكاء الاصطناعي.</p><p><strong>اللابات هي مشروعك النهائي.</strong> أكملها بالتتابع دون تكليف نهائي منفصل.</p></td></tr></table>
+This capstone implements a reproducible end-to-end mini-lakehouse for AI-ready data engineering using the fixed synthetic `MASAR_SMALL_V1` dataset.
 
-<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Your five-day path</h2><p><strong><a href="day01/README.md">Day 1</a></strong> · Foundations and Bronze</p><p><strong><a href="day02/README.md">Day 2</a></strong> · ELT and Silver</p><p><strong><a href="day03/README.md">Day 3</a></strong> · Delta transactions and maintenance</p><p><strong><a href="day04/README.md">Day 4</a></strong> · Streaming, quality and governance</p><p><strong><a href="day05/README.md">Day 5</a></strong> · Gold, AI/BI and project submission</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>مسارك في الأيام الخمسة</h2><p><strong><a href="day01/README.md">اليوم 1</a></strong> · الأساسيات وطبقة Bronze</p><p><strong><a href="day02/README.md">اليوم 2</a></strong> · التحويل وبناء Silver</p><p><strong><a href="day03/README.md">اليوم 3</a></strong> · معاملات Delta والصيانة</p><p><strong><a href="day04/README.md">اليوم 4</a></strong> · التدفق والجودة والحوكمة</p><p><strong><a href="day05/README.md">اليوم 5</a></strong> · طبقة Gold ومخرجات AI وBI وتسليم المشروع</p></td></tr></table>
+The project follows a Bronze → Silver → Gold architecture and demonstrates ingestion, data validation, Delta Lake reliability, Kafka/Spark streaming, quality quarantine, recovery, BI serving, and point-in-time AI feature construction.
 
-<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Before you start</h2><p><a href="docs/SETUP.md">Prepare your environment</a> · <a href="TRAINING_CONTENT.md">Learning outcomes</a> · <a href="data/DICTIONARY.md">Data dictionary</a> · <a href="project/SUBMISSION.md">Submission guide</a>.</p><p>Use the same 72 base trips, 6 drivers and 216 base location events throughout the course, with the supplied late/replay/correction fixtures. Data and code are shared once; each day contains its own learning materials. No paid API or GPU is required.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>قبل أن تبدأ</h2><p><a href="docs/SETUP.md">جهّز بيئتك</a> · <a href="TRAINING_CONTENT.md">مخرجات التعلم</a> · <a href="data/DICTIONARY.md">قاموس البيانات</a> · <a href="project/SUBMISSION.md">دليل التسليم</a>.</p><p>استخدم الرحلات الأساسية الـ72 والسائقين الستة وأحداث المواقع الـ216 طوال الدورة، مع ملفات التأخر والإعادة والتصحيح المرفقة. تُحفظ البيانات والأكواد المشتركة مرة واحدة، ويضم كل يوم مواده التعليمية. لا تحتاج إلى API مدفوع أو GPU.</p></td></tr></table>
+The implementation uses only the supplied synthetic data and preserves execution evidence for the completed labs.
 
-<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p><a href="docs/ADMINISTRATION.md">Participation and support</a> · <a href="docs/GIT_WORKFLOW.md">Git guide</a> · <a href="docs/TROUBLESHOOTING.md">Troubleshooting</a> · <a href="docs/VERIFICATION.md">Execution record</a> · <a href="https://github.com/SDAIAAcademy">SDAIA Academy</a></p><p>At final submission, name the programme and <strong>SDAIA Academy</strong> in your project README, link to <a href="https://github.com/SDAIAAcademy">the Academy</a>, and include <code>#SDAIAAcademy</code> in the README and your submission message. Follow <a href="project/SUBMISSION.md">the submission guide</a>. Optional extensions and repository stars are not passing conditions. Follow the organizer’s announced attendance, deadline and submission rules.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p><a href="docs/ADMINISTRATION.md">المشاركة والدعم</a> · <a href="docs/GIT_WORKFLOW.md">دليل Git</a> · <a href="docs/TROUBLESHOOTING.md">معالجة الأخطاء</a> · <a href="docs/VERIFICATION.md">سجل التنفيذ</a> · <a href="https://github.com/SDAIAAcademy">أكاديمية سدايا</a></p><p>عند التسليم النهائي، اذكر اسم البرنامج و<strong>أكاديمية سدايا</strong> في README مشروعك، وأدرج <a href="https://github.com/SDAIAAcademy">رابط الأكاديمية</a> والوسم <code>#SDAIAAcademy</code> داخل README وفي رسالة التسليم. اتبع <a href="project/SUBMISSION.md">دليل التسليم</a>. الامتدادات الاختيارية ونجوم المستودع ليست شروط نجاح. اتبع ما تعلنه الجهة المنظمة بشأن الحضور والمواعيد وقناة التسليم.</p></td></tr></table>
+## Dataset
 
+The project uses the fixed `MASAR_SMALL_V1` dataset:
+
+| Dataset    | Base Records |
+| ---------- | -----------: |
+| Trips      |           72 |
+| Drivers    |            6 |
+| GPS Events |          216 |
+
+The project does not introduce real customer, identity, phone, or GPS data.
+
+## Labs 01–08
+
+### Lab 01 — Bronze Ingestion
+
+Created the reproducible Bronze layer while preserving source payloads and ingestion metadata. The base snapshot contains 72 trips, 6 drivers, and 216 GPS events.
+
+### Lab 02 — Cost and Benchmarking
+
+Compared always-on and scheduled compute assumptions, calculated the break-even point, and retained observed benchmark evidence and query plans.
+
+### Lab 03 — Silver and ELT
+
+Built typed and validated Silver data, applied business-key deduplication and revision precedence, and verified the resulting trusted snapshots.
+
+### Lab 04 — Delta Transactions and Maintenance
+
+Demonstrated Delta Lake transaction history, time travel, correction, controlled schema evolution, maintenance, delete/restore recovery, and a deliberate constraint failure.
+
+### Lab 05 — Kafka and Spark Streaming
+
+Implemented a real Kafka producer/consumer flow with Spark Kafka ingestion and a persistent checkpoint.
+
+Observed transport receipts were 216 for the base phase, 216 after restart, 218 during replay, and 219 during the late-event phase. The final distinct business-event snapshot contained 217 events.
+
+The demonstrated run does not claim broker failover, distributed deployment, crash-stress recovery, or watermark execution.
+
+### Lab 06 — Data Quality and Quarantine
+
+Applied Great Expectations validation and an explicit quality gate to an 82-row mixed candidate.
+
+The result was 7 quarantined rows and 75 approved/revalidated rows. Quarantine reasons and validation evidence are preserved.
+
+### Lab 07 — Recovery and Rebuild
+
+Demonstrated an injected failure, preserved the previous valid release, rebuilt a new release identity, and verified the rebuilt content.
+
+### Lab 08 — Gold, BI, and AI Serving
+
+Built Gold, BI, and AI-ready serving outputs.
+
+The final BI fact contains 75 trips with total fare of 1880.60 SAR.
+
+AI features use the point-in-time cutoff:
+
+`2026-06-04T03:05:00Z`
+
+Future labels remain `UNOBSERVED` when the corresponding future observation is not available. No machine-learning model was trained or evaluated in this capstone.
+
+## Evidence
+
+The primary executed evidence notebook is:
+
+`Data-Engineering-For-AI-SDAIA.ipynb`
+
+Supporting project evidence is provided through:
+
+* `LAB01_NOTES.md` through `LAB08_NOTES.md`
+* `BENCHMARKS.md`
+* `DECISIONS.md`
+* `GOVERNANCE.md`
+* `reports/`
+* `mini_lakehouse/`
+
+The repository preserves both successful execution evidence and deliberate failure/recovery evidence.
+
+## Architecture
+
+```text
+MASAR_SMALL_V1
+      |
+      v
+   Bronze
+      |
+      v
+ Typed / Validated Staging
+      |
+      v
+    Silver
+      |
+      +----> Quality Gate ----> Approved
+      |                     \
+      |                      -> Quarantine
+      |
+      v
+     Gold
+    /    \
+   BI     AI
+Serving Features
+```
+
+## Key Engineering Decisions
+
+The main technical decisions are documented in `DECISIONS.md`.
+
+They include:
+
+* fixed synthetic dataset and reproducible base volumes
+* append-only Bronze ingestion
+* separation of transport retries from business deduplication
+* business-key and revision-precedence rules for Silver
+* explicit quality-gate and quarantine decisions
+* persistent streaming checkpoint reuse
+* Delta time-travel and recovery evidence
+* fixed point-in-time cutoff for AI features
+* clear separation between implemented controls and proposed production controls
 
 ## Development Environment
+
+
+
+
+
+
+
 
 - Ubuntu Linux
 - Docker
