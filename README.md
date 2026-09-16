@@ -16,7 +16,7 @@ The project demonstrates an end-to-end Bronze → Silver → Gold data platform 
 
 ### Submission structure
 
-The primary executed evidence notebook is `day01/test.ipynb`, containing Labs 01–08 according to the supervisor's delivery instruction.
+The primary executed evidence notebook is `ALL_LABS_01_08.ipynb`, containing Labs 01–08 according to the supervisor's delivery instruction.
 
 Supporting evidence is preserved in `LAB01_NOTES.md` through `LAB08_NOTES.md`, `reports/`, and `mini_lakehouse/`.
 
