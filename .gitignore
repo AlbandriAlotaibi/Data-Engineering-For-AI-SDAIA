@@ -28,3 +28,7 @@ day02/dbt/profiles.yml
 
 # Generated validation logs and notebook attempts
 evidence/
+
+# Required project Delta evidence
+!mini_lakehouse/
+!mini_lakehouse/**

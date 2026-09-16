@@ -1,6 +1,28 @@
-<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>SDAIA Academy · Learner materials</p><h1>Modern Data Engineering<br>for AI Systems</h1><h2>MASAR · Mini-Lakehouse</h2><p><strong>Meaad Al-Marri</strong><br>SDA-DSC-214 · Five days · Eight cumulative labs</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>أكاديمية سدايا · مواد المتدرب</p><h1>هندسة البيانات الحديثة<br>لأنظمة الذكاء الاصطناعي</h1><h2>مسار · بيئة بيانات مصغرة</h2><p><strong>ميعاد المري</strong><br>SDA-DSC-214 · خمسة أيام · ثمانية لابات تراكمية</p></td></tr></table>
+# MASAR Mini-Lakehouse — Capstone Project
 
-<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>What you will build</h2><p>Turn small synthetic trip, driver and location feeds into a reliable data pipeline: preserve the source, build Silver, manage changes, receive events, check quality and deliver reporting and AI-ready tables.</p><p><strong>The labs are your final project.</strong> Complete them in sequence; no separate final assignment is added.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>ماذا ستبني؟</h2><p>حوّل ملفات اصطناعية صغيرة للرحلات والسائقين والمواقع إلى خط بيانات موثوق: احفظ المصدر، وابنِ Silver، وأدر التغييرات، واستقبل الأحداث، وافحص الجودة، ثم جهّز جداول التقارير والذكاء الاصطناعي.</p><p><strong>اللابات هي مشروعك النهائي.</strong> أكملها بالتتابع دون تكليف نهائي منفصل.</p></td></tr></table>
+This repository is my completed capstone for the SDAIA Academy **Modern Data Engineering for AI Systems** programme.
+
+The project demonstrates an end-to-end Bronze → Silver → Gold data platform using the fixed synthetic `MASAR_SMALL_V1` dataset, with Delta Lake reliability, Kafka/Spark streaming, Great Expectations quality validation, quarantine, recovery, BI serving, and point-in-time AI features.
+
+### Final evidence
+
+- 72 base trips, 6 drivers, 216 GPS events
+- 75 trusted trips after the supplied correction/late-event scenario
+- Day 4 streaming: 219 transport receipts and 217 distinct business events
+- Quality gate: 82 candidates → 7 quarantined + 75 approved
+- Final BI fact: 75 trips and 1880.60 SAR
+- AI feature cutoff: `2026-06-04T03:05:00Z`
+- Deliberate failure evidence and recovery evidence are preserved
+
+### Submission structure
+
+The primary executed evidence notebook is `day01/test.ipynb`, containing Labs 01–08 according to the supervisor's delivery instruction.
+
+Supporting evidence is preserved in `LAB01_NOTES.md` through `LAB08_NOTES.md`, `reports/`, and `mini_lakehouse/`.
+
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>SDAIA Academy · Capstone Project</p><h1>Modern Data Engineering<br>for AI Systems</h1><h2>MASAR · Mini-Lakehouse</h2><p><strong>Albandri Alotaibi</strong><br>SDA-DSC-214 · Five days · Eight cumulative labs</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>أكاديمية سدايا · مواد المتدرب</p><h1>هندسة البيانات الحديثة<br>لأنظمة الذكاء الاصطناعي</h1><h2>مسار · بيئة بيانات مصغرة</h2><p><strong>Albandri Alotaibi</strong><br>SDA-DSC-214 · خمسة أيام · ثمانية لابات تراكمية</p></td></tr></table>
+
+<table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Project Overview</h2><p>Turn small synthetic trip, driver and location feeds into a reliable data pipeline: preserve the source, build Silver, manage changes, receive events, check quality and deliver reporting and AI-ready tables.</p><p><strong>The labs are your final project.</strong> Complete them in sequence; no separate final assignment is added.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>نظرة عامة على المشروع</h2><p>حوّل ملفات اصطناعية صغيرة للرحلات والسائقين والمواقع إلى خط بيانات موثوق: احفظ المصدر، وابنِ Silver، وأدر التغييرات، واستقبل الأحداث، وافحص الجودة، ثم جهّز جداول التقارير والذكاء الاصطناعي.</p><p><strong>اللابات هي مشروعك النهائي.</strong> أكملها بالتتابع دون تكليف نهائي منفصل.</p></td></tr></table>
 
 <table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>Your five-day path</h2><p><strong><a href="day01/README.md">Day 1</a></strong> · Foundations and Bronze</p><p><strong><a href="day02/README.md">Day 2</a></strong> · ELT and Silver</p><p><strong><a href="day03/README.md">Day 3</a></strong> · Delta transactions and maintenance</p><p><strong><a href="day04/README.md">Day 4</a></strong> · Streaming, quality and governance</p><p><strong><a href="day05/README.md">Day 5</a></strong> · Gold, AI/BI and project submission</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>مسارك في الأيام الخمسة</h2><p><strong><a href="day01/README.md">اليوم 1</a></strong> · الأساسيات وطبقة Bronze</p><p><strong><a href="day02/README.md">اليوم 2</a></strong> · التحويل وبناء Silver</p><p><strong><a href="day03/README.md">اليوم 3</a></strong> · معاملات Delta والصيانة</p><p><strong><a href="day04/README.md">اليوم 4</a></strong> · التدفق والجودة والحوكمة</p><p><strong><a href="day05/README.md">اليوم 5</a></strong> · طبقة Gold ومخرجات AI وBI وتسليم المشروع</p></td></tr></table>
 

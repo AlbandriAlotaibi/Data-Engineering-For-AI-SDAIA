@@ -1,0 +1,217 @@
+{
+  "as_of_utc": "2026-06-04T03:05:00Z",
+  "checks": {
+    "ai.zone_hourly_features_schema_and_keys": true,
+    "ai.zone_hourly_labels_schema_and_keys": true,
+    "bi.dim_date_schema_and_keys": true,
+    "bi.dim_driver_schema_and_keys": true,
+    "bi.dim_zone_schema_and_keys": true,
+    "bi.fact_trips_schema_and_keys": true,
+    "events_aggregated_before_join": true,
+    "fact_grain_75": true,
+    "feature_availability_checked": true,
+    "feature_label_keys_aligned": true,
+    "foreign_keys_valid": true,
+    "gold.driver_daily_schema_and_keys": true,
+    "gold.zone_hourly_demand_schema_and_keys": true,
+    "gold_fact_totals_match": true,
+    "group_grains_reconcile": true,
+    "labels_not_fabricated": true
+  },
+  "dataset_manifest_sha256": "20a7e45bed2980b9394c10e8532da3b9f40f614366bb2df26a88610253e768e3",
+  "engine_executed": true,
+  "inputs": {
+    "events": {
+      "path": "mini_lakehouse/silver/gps_events_day04/c82d0d3845164486bc08ebcd4a984456",
+      "row_count": 217,
+      "version": 0
+    },
+    "quality_report_sha256": "82ac3537676381fb2776583df0808e7fd6f53c7ef53c57f52baac79c7d746583",
+    "stream_report_sha256": "7af03d69fcbe48053a5f3aae87816056873c1ea1fe61d05c0c3dad8f78477976",
+    "trips": {
+      "path": "mini_lakehouse/silver/validated_day04/88a51ef56ff5461ab0ca94b8ed84e9aa",
+      "row_count": 75,
+      "version": 0
+    }
+  },
+  "not_proven": [
+    "global multi-table atomicity",
+    "concurrent publisher safety",
+    "production-scale performance",
+    "dbt execution"
+  ],
+  "run_id": "271e55602b7a4fb18e5b87887733d396",
+  "scope": "DAY05_NATIVE_GOLD",
+  "spark_version": "3.5.8",
+  "tables": {
+    "ai.zone_hourly_features": {
+      "artifacts": {
+        "commits": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/ai/zone_hourly_features/_delta_log/00000000000000000000.json",
+            "sha256": "48b8dc778523692a6e016b4df2b0e880345002b05c9b620c939fb292472bb1fd"
+          }
+        ],
+        "data_files": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/ai/zone_hourly_features/part-00000-0e74b1a3-3402-4ca2-b34b-d6d4d673ccbe-c000.snappy.parquet",
+            "sha256": "1a8fbb804c340f727e7c9a362dc3533263ff9d7f7bd99384d90dc800feea8c42"
+          }
+        ]
+      },
+      "content_sha256": "e03e5508536ae24eb43d09b5dcbfb16b004e5272477b476511f7257c0d2d696e",
+      "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/ai/zone_hourly_features",
+      "row_count": 3,
+      "version": 0
+    },
+    "ai.zone_hourly_labels": {
+      "artifacts": {
+        "commits": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/ai/zone_hourly_labels/_delta_log/00000000000000000000.json",
+            "sha256": "259cb5756f545ef74a7147225bc1638705d06cf371ba1ec3b418d6d9f0dbdc08"
+          }
+        ],
+        "data_files": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/ai/zone_hourly_labels/part-00000-e198e370-e9e2-4860-87ee-3d9f759b1d31-c000.snappy.parquet",
+            "sha256": "d5bf6f81cacaf4cd1d7b62e2bf8e36b5d45d037c2e0500d207cd6e82d0bfb38c"
+          },
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/ai/zone_hourly_labels/part-00001-2104bb93-bd2d-4f4d-96dd-35cdf8fd3aa3-c000.snappy.parquet",
+            "sha256": "5e49736237dcb9513766dfe01b9049b32268774478539169e96cbab9abddfa67"
+          }
+        ]
+      },
+      "content_sha256": "cc558ea2004e25b4d2255e9dcc07c3eb4808c5bd4b3d546c02570634afe2dcba",
+      "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/ai/zone_hourly_labels",
+      "row_count": 3,
+      "version": 0
+    },
+    "bi.dim_date": {
+      "artifacts": {
+        "commits": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/bi/dim_date/_delta_log/00000000000000000000.json",
+            "sha256": "ece4b41becb64b3ac9f98c7d71220c763e53cd38f55d85c6363560ecf44e8210"
+          }
+        ],
+        "data_files": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/bi/dim_date/part-00000-f46cfabe-5401-4540-a9ea-8b094379f528-c000.snappy.parquet",
+            "sha256": "a2a18592d67a2ee243238396d1a982c5f85224897eab09e71c051ad9f6cc4c07"
+          }
+        ]
+      },
+      "content_sha256": "9d5fff63bbe816b9dc827e1739ed076c2c7d79a0f4df8126e92419d1c021f068",
+      "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/bi/dim_date",
+      "row_count": 3,
+      "version": 0
+    },
+    "bi.dim_driver": {
+      "artifacts": {
+        "commits": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/bi/dim_driver/_delta_log/00000000000000000000.json",
+            "sha256": "474b7cd9b4c188e45d6d8fe24cc4ae1f16d769146d7da51f373770a4b98e781a"
+          }
+        ],
+        "data_files": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/bi/dim_driver/part-00000-f1c773cb-72ea-45d0-ac2e-85747e7c3ff1-c000.snappy.parquet",
+            "sha256": "a387fc1c6a82a7368f4e355c905cb1e0747bffb89a9a696df2e56af04a196a9b"
+          }
+        ]
+      },
+      "content_sha256": "e28c842a5925b9a80c044337d31a97adb586269cfa38ba9675791f98770fea95",
+      "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/bi/dim_driver",
+      "row_count": 6,
+      "version": 0
+    },
+    "bi.dim_zone": {
+      "artifacts": {
+        "commits": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/bi/dim_zone/_delta_log/00000000000000000000.json",
+            "sha256": "9b605a2a4b2f5c4c7f8b66eb0075c41027218959315ed44b11e6f12cf50e1131"
+          }
+        ],
+        "data_files": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/bi/dim_zone/part-00000-7390401d-e72a-45c8-b034-b6779481f865-c000.snappy.parquet",
+            "sha256": "ae590fb5ea05b04f1530b587c8cf3754b6f1baff90965efc4b82fca4d3445459"
+          },
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/bi/dim_zone/part-00001-500f052c-a3dd-4829-9367-f0bb03a2ad40-c000.snappy.parquet",
+            "sha256": "743f6dfa2a79fd72f0e866fe2a8061bfd6c40c71eabe59a0a9dc3ab821ccc74c"
+          }
+        ]
+      },
+      "content_sha256": "96b4e93f9f83266f55f0854a50a4fe584feead536efa1e808cec82a633fbb238",
+      "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/bi/dim_zone",
+      "row_count": 3,
+      "version": 0
+    },
+    "bi.fact_trips": {
+      "artifacts": {
+        "commits": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/bi/fact_trips/_delta_log/00000000000000000000.json",
+            "sha256": "1ecfc820094ac7577aaf2651d3f017641ddaeda21965d14e88413463f7c6b17b"
+          }
+        ],
+        "data_files": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/bi/fact_trips/part-00000-5a558e6a-a6f0-47ae-8905-cb24e2124d6c-c000.snappy.parquet",
+            "sha256": "bc3e3cfb201ba94692e75acb79ce31e15d48ecd8d8d4820e9df229fbce0ef1b9"
+          }
+        ]
+      },
+      "content_sha256": "7bb537f7578b3c43a676d384795f34537496c578a904eb8c54c801bd33ac5104",
+      "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/bi/fact_trips",
+      "row_count": 75,
+      "version": 0
+    },
+    "gold.driver_daily": {
+      "artifacts": {
+        "commits": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/gold/driver_daily/_delta_log/00000000000000000000.json",
+            "sha256": "59f02bd521f2d9203fc7d5567cfd67ea95f83718d7cfbe9b7bc5c14d35e01218"
+          }
+        ],
+        "data_files": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/gold/driver_daily/part-00000-3e7c6eb9-cf07-4699-89d9-a20ca79f1d27-c000.snappy.parquet",
+            "sha256": "d2a9fa765de79b4f5dbd26b28e8020d9363506143b2af7285b28a3ca63b95fed"
+          }
+        ]
+      },
+      "content_sha256": "3ec91b6fecc9359bbc54cb67384cba54420a94e85265a6f97879278e76e7f597",
+      "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/gold/driver_daily",
+      "row_count": 18,
+      "version": 0
+    },
+    "gold.zone_hourly_demand": {
+      "artifacts": {
+        "commits": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/gold/zone_hourly_demand/_delta_log/00000000000000000000.json",
+            "sha256": "ef4e6724c18bb867fc822753b91b3332f0da32bd6864019a517099c21d84e9fc"
+          }
+        ],
+        "data_files": [
+          {
+            "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/gold/zone_hourly_demand/part-00000-f273430f-633a-4119-8781-032b8eef28ef-c000.snappy.parquet",
+            "sha256": "cd1bac1d94ca4918fb654e2319e37f62afb2d559205b4b68cdbf88277ca4ccd7"
+          }
+        ]
+      },
+      "content_sha256": "b382c3b49c61994849a7afbab8dea504f5ae801da70d83622938b8f9cc37dcdd",
+      "path": "mini_lakehouse/serving_releases/271e55602b7a4fb18e5b87887733d396/gold/zone_hourly_demand",
+      "row_count": 75,
+      "version": 0
+    }
+  },
+  "transaction_boundary": "Each Delta table commits independently; this manifest gates this local consumer only."
+}

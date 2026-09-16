@@ -1,0 +1,89 @@
+{
+  "artifacts": {
+    "drivers": {
+      "commits": [
+        {
+          "path": "mini_lakehouse/bronze/drivers/_delta_log/00000000000000000000.json",
+          "sha256": "2e0fcb457a1c18198f3506aa8868188026e2a87e0f8ccdcefe842322cd054b0c"
+        }
+      ],
+      "data_files": [
+        {
+          "path": "mini_lakehouse/bronze/drivers/part-00000-1aab06bf-74bb-42db-b64d-0c68e0b6d5f8-c000.snappy.parquet",
+          "sha256": "5609fe6441d165052139bc39fa5eb36c6b0bd67ad5382ba778635d1c39bb5a35"
+        }
+      ]
+    },
+    "gps_events": {
+      "commits": [
+        {
+          "path": "mini_lakehouse/bronze/gps_events/_delta_log/00000000000000000000.json",
+          "sha256": "6967fc406103d3fd4ae23e997dc2cecf5bc5c5cc6734599cc9c8a3e5739f4aaf"
+        }
+      ],
+      "data_files": [
+        {
+          "path": "mini_lakehouse/bronze/gps_events/part-00000-1a775b34-cecd-4eb7-afb9-fa377908a474-c000.snappy.parquet",
+          "sha256": "662b727f237b91ab8ba7db34bbd541d2be01276f67d38ae69570c287f71b418c"
+        }
+      ]
+    },
+    "trips": {
+      "commits": [
+        {
+          "path": "mini_lakehouse/bronze/trips/_delta_log/00000000000000000000.json",
+          "sha256": "f5060bd8519cae42c3bb2202b784f48a0e958b51f921bb6276b6576f65bb34c6"
+        },
+        {
+          "path": "mini_lakehouse/bronze/trips/_delta_log/00000000000000000001.json",
+          "sha256": "f2b989c66d473295e764fed356f6e87954b1011261d314c463da96414ea13dca"
+        }
+      ],
+      "data_files": [
+        {
+          "path": "mini_lakehouse/bronze/trips/part-00000-198719d9-6bd5-4c5a-abf6-e6434d0a144d-c000.snappy.parquet",
+          "sha256": "89273736e41a3f8311d52a5fd297d434054d0fa23cdb5b033a972940c0b4e43e"
+        },
+        {
+          "path": "mini_lakehouse/bronze/trips/part-00000-f5a581d1-e46d-444d-bbb1-963a9df146c3-c000.snappy.parquet",
+          "sha256": "453ef47169508776a524fb988beb4db45e545bd70f3aa034efc1f84eda3915e1"
+        }
+      ]
+    }
+  },
+  "batch_counts": {
+    "base_001": 72,
+    "replay_002": 72
+  },
+  "business_trip_count": 72,
+  "checks": {
+    "base_csv_columns_are_strings": true,
+    "business_trip_count_unchanged": true,
+    "expected_totals": true,
+    "initial_snapshot_retained": true,
+    "payloads_and_source_hashes_preserved": true,
+    "real_delta_files_present": true,
+    "two_trip_deliveries": true
+  },
+  "counts": {
+    "drivers": 6,
+    "gps_events": 216,
+    "trips": 144
+  },
+  "dataset_manifest_sha256": "20a7e45bed2980b9394c10e8532da3b9f40f614366bb2df26a88610253e768e3",
+  "engine_executed": true,
+  "payload_digests": {
+    "drivers": {
+      "base_001": "baaf08b220bbb75cc9ca190dd4e80395f05baca4e30405ed0dbfe6702bf6f288"
+    },
+    "gps_events": {
+      "base_001": "dac4f2111d88abae3aa489bd7788b7ccb03b8e259c21c814e2c5a8c29c3a8db2"
+    },
+    "trips": {
+      "base_001": "7257378390b1239dd31bb94fb9f8277f0bba15044b797f639cd31a094dd966ba",
+      "replay_002": "7257378390b1239dd31bb94fb9f8277f0bba15044b797f639cd31a094dd966ba"
+    }
+  },
+  "scope": "DAY01_BRONZE_ENGINE",
+  "spark_version": "3.5.8"
+}
