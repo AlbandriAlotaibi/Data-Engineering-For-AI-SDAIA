@@ -4,6 +4,14 @@ This repository is my completed capstone for the SDAIA Academy **Modern Data Eng
 
 The project demonstrates an end-to-end Bronze → Silver → Gold data platform using the fixed synthetic `MASAR_SMALL_V1` dataset, with Delta Lake reliability, Kafka/Spark streaming, Great Expectations quality validation, quarantine, recovery, BI serving, and point-in-time AI features.
 
+###Programme
+Developed as part of Modern Data Engineering for AI Systems (SDA-DSC-214) at SDAIA Academy.
+SDAIA Academy: https://github.com/SDAIAAcademy
+#SDAIAAcademy
+
+GitHub (https://github.com/SDAIAAcademy)
+SDAIA Academy.
+
 ### Final evidence
 
 - 72 base trips, 6 drivers, 216 GPS events
